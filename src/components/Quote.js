@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Button from './Button'
+import Button from "./Button";
+import Icons from "./Icons";
 
 const Quote = () => {
   const [randomQuote, setRandomQuote] = useState("");
@@ -15,14 +16,32 @@ const Quote = () => {
       .catch((error) => console.log(error));
   }, []);
 
+  const handleClick = () => {
+    window.location.reload()
+ }
+
+ const handleSpeech = () => {
+  
+  const toRead = randomQuote.text
+  const utterance = new SpeechSynthesisUtterance(toRead);
+  speechSynthesis.speak(utterance);
+}
+
   return (
     <div>
       <h1>Quotes of the day</h1>
       <div key={randomQuote.id}>
-        <p>{randomQuote.text}</p>
+        <p>
+           <span>"</span> {randomQuote.text} <span>"</span> </p>
         <i>{randomQuote.author}</i>
       </div>
-      <Button/>
+      <div>
+        <hr/>
+      </div>
+      <Button
+      onClick1 = {handleSpeech}
+      onClick2 = {handleClick}
+      />
     </div>
   );
 };
