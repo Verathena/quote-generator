@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Button from "./Button";
-import Icons from "./Icons";
+
 
 const Quote = () => {
   const [randomQuote, setRandomQuote] = useState("");
