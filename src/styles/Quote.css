@@ -1,0 +1,36 @@
+.wrapper {
+  margin: 0 auto;
+  height: 100vh;
+  padding: 0;
+  background-color: blueviolet;
+  text-align: center;
+  position: relative;
+}
+
+.quotes--section {
+  background-color: white;
+  border: 2px solid purple;
+  border-radius: 20px;
+  width: 70%;
+  height: 40%;
+  font-size: 18px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.quotes--span {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 30px;
+  color: purple;
+  font-weight: bolder;
+}
+
+.quotes--author {
+    display: block;
+    width: 90%;
+  text-align: right;
+}

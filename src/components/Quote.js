@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Button from "./Button";
-import Icons from "./Icons";
+import "../styles/Quote.css"
 
 const Quote = () => {
   const [randomQuote, setRandomQuote] = useState("");
@@ -27,13 +27,15 @@ const Quote = () => {
   speechSynthesis.speak(utterance);
 }
 
+
   return (
-    <div>
+    <div className="wrapper">
+      <div className="quotes--section">
       <h1>Quotes of the day</h1>
       <div key={randomQuote.id}>
         <p>
-           <span>"</span> {randomQuote.text} <span>"</span> </p>
-        <i>{randomQuote.author}</i>
+           <span className="quotes--span">"</span> {randomQuote.text} <span className="quotes--span">"</span> </p>
+        <i className="quotes--author"> - {randomQuote.author}</i>
       </div>
       <div>
         <hr/>
@@ -42,6 +44,7 @@ const Quote = () => {
       onClick1 = {handleSpeech}
       onClick2 = {handleClick}
       />
+    </div>
     </div>
   );
 };

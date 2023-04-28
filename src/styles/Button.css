@@ -1,0 +1,28 @@
+.button--class {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: space-around;
+}
+
+.quotes--button {
+  width: 40px;
+  height: 40px;
+  color: purple;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.quotes--button a {
+  text-decoration: none;
+  color: purple;
+}
+
+.new--quotes--button {
+  color: white;
+  width: 6rem;
+  height: 2.5rem;
+  border: 2px solid purple;
+  border-radius: 15%;
+  background-color: purple;
+}
